@@ -21,7 +21,7 @@ BS_MISSION_LENGTH setRain random(1);
 
 
 // turns all lights on island off
-[false,[6400,6400,0],6400] call BS13_fnc_lightsOut;
+[false, [6400, 6400, 0], 6400] call BS13_fnc_lightsOut;
 
 // turns the base on
 private _initHandle1 = execVM "setup\base_systems.sqf";

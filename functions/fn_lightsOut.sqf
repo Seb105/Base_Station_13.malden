@@ -24,24 +24,24 @@ private _catEyes = ["Land_Flush_Light_green_F","Land_Flush_Light_red_F","Land_Fl
 private _damage_value = 0;
 
 if (_onoff) then {
-	_damage_value = 0;
+    _damage_value = 0;
 } else {
-	_damage_value = 0.97;
+    _damage_value = 0.97;
 };
 {
-   private _type = _x;
-   private _lamps = _position nearObjects [_type, _distance];
-   {
-      _x setDamage _damage_value;
-   } forEach _lamps;
-   sleep 0.1;
+    private _type = _x;
+    private _lamps = _position nearObjects [_type, _distance];
+    {
+        _x setDamage _damage_value;
+    } forEach _lamps;
+    sleep 0.1;
 } forEach _types;
 
 
 {
-   private _catEye = _position nearObjects [_x, _distance];
-   {
-   	_x hideObjectGlobal !_onoff;
-   } forEach _catEye;
-   sleep 0.1;
+    private _catEye = _position nearObjects [_x, _distance];
+    {
+       _x hideObjectGlobal !_onoff;
+    } forEach _catEye;
+    sleep 0.1;
 } forEach _catEyes;
